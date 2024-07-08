@@ -35,21 +35,22 @@ def merge_df(df, holidays, oil, stores, transactions):
 
 def info_table(df, num_unique_threshold = 50):
     """
+    Comprehensive DataFrame Summary Table Generator
+    
     For a given dataframe, this function creates a table with column names, data types, count, mean, 
-    standard deviation, minimum, 25%, 50%, 75% quantiles, maximum, number of unique values, unique values 
-    if the number of unique values is less then the given threshold, number of null values and 
+    standard deviation, minimum, 25%, 50%, 75% quantiles, maximum, number of unique values, 
+    unique values list, number of null values and 
     percentage of null values.
 
     Args:
     df: pd.DataFrame
         Input dataframe.
     num_unique_threshold: int, optional (default = 50)  
-        Threshold for number of unique values. If the number of unique values in a column is less than 
-        the threshold, those values will be displayed.
+        Threshold for listing unique values.
 
     Returns:
     df_info: pd.DataFrame
-        Dataframe with all the details.
+        A summary table with detailed statistics for each column.
 
     Raises:
     Exception
